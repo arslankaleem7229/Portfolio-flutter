@@ -1,0 +1,15 @@
+List<String> skills = [
+  'Python',
+  'SQL',
+  'Flutter',
+  'JavaScript',
+  'Swift',
+  'Data Analysis',
+  'Business Analytics',
+  'Tableau',
+  'Power BI',
+  'AWS',
+  'Azure',
+  'Git',
+  'GitHub',
+];

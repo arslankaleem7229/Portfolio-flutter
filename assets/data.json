@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Email",
+    "subtitle": "arslankaleem7229@gmail.com",
+    "rowSpan": 2,
+    "colSpan": 1,
+    "colors": ["0xFFD44638"],
+    "link": "mailto:arslankaleem7229@email.com"
+  },
+  {
+    "title": "LinkedIn",
+    "subtitle": "arslan-kaleem",
+    "rowSpan": 1,
+    "colSpan": 1,
+    "colors": ["0xFF0077B5"],
+    "link": "https://www.linkedin.com/in/arslan-kaleem/"
+  },
+  {
+    "title": "GitHub",
+    "subtitle": "arslankaleem7229",
+    "rowSpan": 3,
+    "colSpan": 1,
+    "colors": ["0xFF181717"],
+    "link": "https://github.com/arslankaleem7229/"
+  },
+  {
+    "title": "Stack Overflow",
+    "subtitle": "arslan-kaleem",
+    "rowSpan": 2,
+    "colSpan": 2,
+    "colors": ["0xFFF48024"],
+    "link": "https://stackoverflow.com/users/15023395/arslan-kaleem"
+  },
+
+  {
+    "title": "Twitter",
+    "subtitle": "iarslankaleem",
+    "rowSpan": 1,
+    "colSpan": 1,
+    "colors": ["0xFF1DA1F2"],
+    "link": "https://x.com/iarslankaleem"
+  },
+  {
+    "title": "Upwork",
+    "subtitle": "Arslan Kaleem",
+    "rowSpan": 1,
+    "colSpan": 1,
+    "colors": ["0xFF6FDA44"],
+    "link": "https://www.upwork.com/freelancers/~0101b7f905cba3a3c7"
+  },
+  {
+    "title": "Website",
+    "subtitle": "Arslan Kaleem",
+    "rowSpan": 3,
+    "colSpan": 1,
+    "colors": ["0xFF4CAF50"],
+    "link": "https://arslankaleem.vercel.app"
+  }
+]
