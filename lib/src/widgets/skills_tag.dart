@@ -8,8 +8,15 @@ class SkillTags extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      spacing: 8.0,
-      runSpacing: 8.0,
+      spacing: 5.0,
+      runSpacing: 5.0,
+      runAlignment: WrapAlignment.start,
+      alignment: WrapAlignment.start,
+      direction: Axis.horizontal,
+      textDirection: TextDirection.ltr,
+      verticalDirection: VerticalDirection.down,
+      clipBehavior: Clip.hardEdge,
+      crossAxisAlignment: WrapCrossAlignment.start,
       children: skills.map((skill) => _buildTag(skill)).toList(),
     );
   }
@@ -24,7 +31,7 @@ class SkillTags extends StatelessWidget {
       child: Text(
         skill,
         style: TextStyle(
-          color: Colors.blue.shade900,
+          color: Colors.amber,
           fontWeight: FontWeight.w500,
         ),
       ),

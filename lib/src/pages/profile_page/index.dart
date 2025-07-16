@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         children: [
           Container(
             padding: const EdgeInsets.only(top: 20),
-            height: 470,
+            height: MediaQuery.of(context).size.height * 0.55,
             margin: const EdgeInsets.only(bottom: 20),
             width: double.infinity,
             child: Stack(
@@ -81,8 +81,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             Radius.circular(15),
                           ),
                         ),
-                        height: 370,
-                        padding: const EdgeInsets.only(top: 120),
+                        height:
+                            MediaQuery.of(context).size.height * 0.45,
+                        padding: EdgeInsets.only(
+                          top:
+                              MediaQuery.of(context).size.height *
+                              0.15,
+                        ),
                         width: double.infinity,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -150,43 +155,44 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withValues(
-                                        alpha: 0.2,
+                          Flexible(
+                            child: Row(
+                              mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black
+                                            .withValues(alpha: 0.2),
+                                        blurRadius: 20,
+                                        offset: Offset(0, 0),
                                       ),
-                                      blurRadius: 20,
-                                      offset: Offset(0, 0),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
+                                  child: Image.asset(
+                                    "assets/Icons/${buttons[index].title.toLowerCase()}.png",
+                                    height: 45,
+                                    width: 45,
+                                    color:
+                                        buttons[index].title
+                                                .toLowerCase() !=
+                                            "linkedin"
+                                        ? Colors.white
+                                        : null,
+                                  ),
                                 ),
-                                child: Image.asset(
-                                  "assets/Icons/${buttons[index].title.toLowerCase()}.png",
-                                  height: 45,
-                                  width: 45,
-                                  color:
-                                      buttons[index].title
-                                              .toLowerCase() !=
-                                          "linkedin"
-                                      ? Colors.white
-                                      : null,
+                                Image.asset(
+                                  "assets/Icons/link.png",
+                                  height: 20,
+                                  width: 20,
+                                  color: Colors.white,
                                 ),
-                              ),
-                              Image.asset(
-                                "assets/Icons/link.png",
-                                height: 20,
-                                width: 20,
-                                color: Colors.white,
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                           SizedBox(height: 10),
                           Text(
