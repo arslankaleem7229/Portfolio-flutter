@@ -11,7 +11,7 @@ class AvatarImage extends StatelessWidget {
       decoration: BoxDecoration(
         color: Color(0xFFFFB928),
         image: DecorationImage(
-          image: AssetImage("assets/avatar.png"),
+          image: AssetImage("assets/images/avatar.png"),
           fit: BoxFit.contain,
         ),
         borderRadius: BorderRadius.all(Radius.circular(20)),

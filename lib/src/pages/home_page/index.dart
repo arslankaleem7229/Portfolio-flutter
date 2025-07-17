@@ -1,10 +1,25 @@
-import 'dart:ui';
-
+import 'package:arslan/src/controllers/app_controller.dart';
 import 'package:arslan/src/pages/profile_page/index.dart';
+import 'package:arslan/src/widgets/gradients.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late final AppController appController;
+
+  @override
+  void initState() {
+    appController = context.read<AppController>();
+    appController.initialize();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,43 +36,8 @@ class HomePage extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            Positioned(
-              top: -100,
-              left: -100,
-              child: ImageFiltered(
-                imageFilter: ImageFilter.blur(
-                  sigmaX: 150,
-                  sigmaY: 150,
-                ),
-                child: Container(
-                  width: 300,
-                  height: 300,
-                  decoration: BoxDecoration(
-                    color: Color(0xFFF37261).withValues(alpha: 0.6),
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: -50,
-              left: 0,
-              right: 0,
-              child: ImageFiltered(
-                imageFilter: ImageFilter.blur(
-                  sigmaX: 500,
-                  sigmaY: 500,
-                ),
-                child: Container(
-                  width: double.infinity,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF842CF2).withValues(alpha: 0.6),
-                    shape: BoxShape.rectangle,
-                  ),
-                ),
-              ),
-            ),
+            TopGradient(),
+            BottomGradient(),
             SafeArea(
               top: true,
               bottom: false,
